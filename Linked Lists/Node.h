@@ -39,6 +39,12 @@ public:
 		if(next != NULL)
 			next->print();
 	}
+
+	Node* takeLast()
+	{
+		if(next != NULL) return next->takeLast();
+		return this;
+	}
 };
 
 void readList(Node *first, int n)
