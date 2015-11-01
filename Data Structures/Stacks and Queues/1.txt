@@ -1,0 +1,2 @@
+1. Fixed - size / 3 each
+2. Dynamic - (2 -- 1)
