@@ -11,7 +11,7 @@ class BinaryTreeNode
 {
 public:
 	int data;
-	BinaryTreeNode *right, *left;
+	BinaryTreeNode *right, *left, *parent;
 
 	BinaryTreeNode(){}
 
@@ -40,5 +40,12 @@ public:
 		std::cout << data << " ";
 		if(right)
 			right->inOrderPrint();
+	}
+
+	int distanceToRoot()
+	{
+		if(parent != NULL)
+			return 1 + parent->distanceToRoot();
+		return 0;
 	}
 };
